@@ -8,8 +8,8 @@ title: About
 # MIT License
 ---
 
-[Visit facebook!](www.facebook.com/MMBlackGuys/)
+
 
 ## Learn More
 
-For more knowledge about Jekyll posts, visit the [Jekyll Docs: Posts](https://jekyllrb.com/docs/posts/).
+For more knowledge about posts on facebook, visit the [Facebook](https://www.facebook.com/MMBlackGuys/).
