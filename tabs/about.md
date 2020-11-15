@@ -9,3 +9,7 @@ title: About
 ---
 
 [Visit facebook!](www.facebook.com/MMBlackGuys/)
+
+## Learn More
+
+For more knowledge about Jekyll posts, visit the [Jekyll Docs: Posts](https://jekyllrb.com/docs/posts/).
