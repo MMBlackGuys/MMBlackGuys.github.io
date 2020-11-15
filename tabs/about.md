@@ -8,4 +8,4 @@ title: About
 # MIT License
 ---
 
->[Visit facebook!](www.facebook.com/MMBlackGuys/)
+[Visit facebook!](www.facebook.com/MMBlackGuys/)
