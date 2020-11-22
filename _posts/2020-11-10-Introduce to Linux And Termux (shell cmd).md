@@ -1,10 +1,10 @@
 ---
 title: Introduce to Linux And Termux (shell cmd) 
 author: Dr-Sm@3t
+image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT97qlUP4V-_4iZcRXp5nsIeJvjkh1XGbWxVw&usqp=CAU
 date: 2020-11-10 2:23:00 +6:30
 categories: [Linux,Termux]
 tags: [Termux,Linux,Cmd]
-image: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.technocrazed.com%2Fhd-linux-wallpapers-backgrounds-for-free-download&psig=AOvVaw1i_g75yAtFJwSXa_Vu34KW&ust=1606143598023000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPC1wqu1lu0CFQAAAAAdAAAAABAD
 ---
 
 ## What is linux?
