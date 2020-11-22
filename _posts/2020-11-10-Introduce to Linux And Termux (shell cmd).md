@@ -8,7 +8,7 @@ tags: [Termux,Linux,Cmd]
 ---
 
 ## What is linux?
-<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FNostalgicaOfficial%2Fvideos%2F378334890285679%2F&show_text=false&width=560" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+
 Linux ဆိုတာ ဘာလဲ လို့ မေးလာရင် Linux ဆိုတာ တစ်ကမ္ဘာလုံးကို အခမဲ့ပေးသုံးတဲ Open Source OS တစ်ခုလို့ပဲ ဖြေဖြစ်ပါလိမ့်မယ်
 
 ဒါဆို ထပ်မေးစရာရှိလာလိမ့်မယ်ဗျ Open Source ဆိုတာ ဘာလဲလို့ပေါ Open Source ဆိုတာ လွတ်လပ်စွာ ပြင်ဆင်/ပြောင်းလဲခွင့် Develop လုပ်ခွင့် Customize လုပ်ခွင့် ပေးထားခြင်းကိုဆိုလိုပါတယ် ဥပမာ Open Source Software တစ်ခုမှာ မူရင်း Code ကိုပါ Publish လုပ်ထားပါတယ် ကြိုက်တဲ User က ဖတ်ရှုခွင့်ရှိတယ် မိမိ စိတ်ကြိုက် ပြောင်းလဲသုံးစွဲခွင့်ရှိပါမယ် ပြင်ရေးခွင့်ရှိပါမယ် ဒါမျုးကို Open Source လို့ခေါ်ပါတယ် ဒါဆို Linux ဆိုတာ ဘာလဲ နည်းနည်းတော့သဘောပေါက်လောက်ပါပြီ အခမဲ့ရတယ် Open Source ဖြစ်တယ် ဟုတ်ပြီး ဒါဆို Linux ဘယ်လိုဖြစ်လာသလဲ??? သမိုင်းကြောင်းလေးကို တစ်ချက်ကြည့်ရအောင်။
