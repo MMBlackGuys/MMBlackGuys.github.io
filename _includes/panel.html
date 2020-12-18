@@ -10,33 +10,25 @@
 
   <div class="access">
 
-  {% if site.data.updates %}
+  {% include update-list.html %}
 
-    {% include update-list.html %}
-
-    {% if update_list.size > 0 %}
+  {% if update_list.size > 0 %}
 
     <div id="access-lastmod" class="post">
       <span>{{- site.data.label.panel.lastmod -}}</span>
       <ul class="post-content pl-0 pb-1 ml-1 mt-2">
 
       {% for item in update_list %}
-        {% assign post_url = item | split: "::" | last | url_encode | prepend: "/posts/" | append: "/" %}
-        {% assign post = site.posts | where: "url", post_url | first %}
-
-        {% if post %}
-          {% assign url = post.url | relative_url %}
-          <li><a href="{{ url }}">{{ post.title }}</a></li>
-        {% endif %}
-
+        {% assign index = item | split: "::" | last | plus: 0 %}
+        {% assign post = site.posts[index] %}
+        {% assign url = post.url | relative_url %}
+        <li><a href="{{ url }}">{{ post.title }}</a></li>
       {% endfor %}
 
       </ul>
-    </div><!-- #access-lastmod -->
+    </div> <!-- #access-lastmod -->
 
-    {% endif %}
-
-  {% endif %} <!-- site.data.updates -->
+  {% endif %}
 
   {% include trending-tags.html %}
 
@@ -44,10 +36,10 @@
     <div id="access-tags">
       <span>{{- site.data.label.panel.trending_tags -}}</span>
       <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
-      
-      {% for tag in trending_tags %}
-        {% capture url %}/tags/{{ tag | downcase | url_encode }}/{% endcapture %}
-        <a class="post-tag" href="{{ url | relative_url }}">{{ tag | replace: '-', ' ' }}</a>
+
+      {% for tag_name in trending_tags %}
+        {% assign url = tag_name | slugify | url_encode | prepend: "/tags/" | append: "/" %}
+        <a class="post-tag" href="{{ url | relative_url }}">{{ tag_name }}</a>
       {% endfor %}
 
       </div>

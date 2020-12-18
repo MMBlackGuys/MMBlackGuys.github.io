@@ -1,0 +1,1 @@
+/* Registering Service Worker */ if('serviceWorker' in navigator) { navigator.serviceWorker.register('/sw.js'); }; <table id="compress_html_profile_20201218" class="compress_html_profile"> <thead> <tr> <td>Step <td>Bytes <tbody> <tr> <td>raw <td>116 <tr> <td>endings <td>117 <tr> <td>comments <td>117 <tr> <td>collapse <td>115 <tr> <td>clippings <td>115 </table>

@@ -6,21 +6,20 @@
 
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-#--------------------------
-
-title: Bl@ck Ar3a - 13                          # the main title
+# --------------------------
+title: 𝓑𝓵@𝓬𝓴 𝓐𝓻3𝓪 - 13                       # the main title
 
 tagline: We are Myanmar Youth Hacker  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Myanmar Youth Hacker Team,Black Area Team,Bl@ck Ar3a 13,ba-13,Hacked By Bl@ck Ar3a - 13
+  Myanmar Youth Hacker Team,Black Area Team,Bl@ck Ar3a 13,ba-13,Hacked By Bl@ck Ar3a - 13.
 
-# Replace with the website url, e.g. 'https://username.github.io'
+# fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
 url: 'https://mmblackguys.github.io/'
 
-author: Bl@ck Ar3a - 13                  # change to your full name
+author: Bl@ck Ar3a - 13                 # change to your full name
 
-avatar: /assets/img/sample/avatar.jpg   # support internet resources
+avatar: /assets/img/favicons/ms-icon-310x310.png  # support internet resources
 
 github:
   username: MMBlackGuys             # change to your github username
@@ -29,19 +28,18 @@ twitter:
   username: twitter_username            # change to your twitter username
 
 social:
-  name: Bl@ck Ar3a - 13                  # it will shows as the copyright owner in Footer
-  email: mmblackguys@main.com             # change to your email address
+  name: Bl@ck Ar3a - 13                # it will shows as the copyright owner in Footer
+  email: mmblackguys@main.com         # change to your email address
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username      # change to your twitter homepage
     - https://github.com/MMBlackGuys       # change to your github homepage
     # Uncomment below to add more social links
     - https://www.facebook.com/MMBlackGuys
-    # - https://www.linkedin.com/in/username
+    # - https://www.linkedin.com/in/khant-si-thu-phyo/
 
 google_site_verification: google_meta_tag_verification # change to your verification string
-
-#--------------------------
+# --------------------------
 
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
@@ -67,31 +65,29 @@ disqus:
   shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 
-# Prefer color scheme setting, available values:
+# Prefer color scheme setting.
 #
-#     dual   - Follow the system prefer color by default, and a toggle will display
-#              in the left bottom of Sidebar, which used for switch the theme between dark and light.
+# Note: Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+#
+# Available options:
 #
 #     light  - Use the light color scheme
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: dual
+theme_mode:   # <light|dark>
 
-# boolean type, global switch for ToC in posts.
+# boolean type, the global switch for ToC in posts.
 toc: true
 
 paginate: 10
 
-markdown: kramdown
-
-highlighter: rouge
-
 kramdown:
-  input: GFM
   syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: 'highlight'
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
     # default_lang: console
     span:
       line_numbers: false
@@ -103,16 +99,21 @@ kramdown:
 # or you think you're smart enough to change other relevant URLs within this template.
 permalink: /posts/:title/
 
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+
 defaults:
   -
     scope:
-      path: ""          # An empty string here means all files in the project
+      path: ''          # An empty string here means all files in the project
       type: posts
     values:
       layout: post
       comments: true    # Enable comments in posts.
       toc: true         # Display TOC column in posts.
-      location: Post
       breadcrumb:
         -
           label: Posts
@@ -124,10 +125,15 @@ defaults:
       comments: false
   -
     scope:
+      path: index.html
+    values:
+      breadcrumb:
+        -
+          label: Posts
+  -
+    scope:
       path: tags
     values:
-      tab_active: Tags
-      location: Tag
       breadcrumb:
         -
           label: Home
@@ -139,8 +145,6 @@ defaults:
     scope:
       path: categories
     values:
-      tab_active: Categories
-      location: Category
       breadcrumb:
         -
           label: Home
@@ -150,7 +154,8 @@ defaults:
           url: /tabs/categories/
   -
     scope:
-      path: tabs
+      path: ''
+      type: tabs             # see `site.collections`
     values:
       layout: page
       dynamic_title: true    # Hide title in mobile screens.
@@ -158,7 +163,6 @@ defaults:
         -
           label: Home
           url: /
-
 
 sass:
   sass_dir: /assets/css
@@ -168,13 +172,13 @@ compress_html:
   clippings: all
   comments: all
   endings: all
-  profile: false
+  profile: true
   blanklines: false
   ignore:
     envs: []
 
 exclude:
-  - vendor        # Avoid Jekyll mistakenly read the vendor directory on Travis-CI's VM .
+  - vendor
   - Gemfile.lock
   - Gemfile
   - tools
@@ -182,17 +186,11 @@ exclude:
   - README.md
   - LICENSE
 
-sitemap_exclude:  # Sitemap will exclude the following items.
-  fuzzy:
-    - /assets/
-  accurate:
-    - /norobots/
-    - /tabs/
-    - /categories/
-    - /tags/
-    - /posts/
-    - 404.html
-    - feed.xml
-    - sitemap.xml
-    - robots.txt
-    - redirects.json
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
